@@ -1,0 +1,82 @@
+<div class="form-style-8">
+  <h2>{{title}}</h2>
+
+  <form class="fieldset">
+
+    <h3>Helseregion</h3>
+    <h4>Hvilke(n) helseregion(er) er et gjort avtale med?</h4>
+    <input type="checkbox" name="agreementNorth"> {{regions[0]}}
+    <input type="checkbox" name="agreementMid"> {{regions[1]}}
+    <input type="checkbox" name="agreementWest"> {{regions[2]}}
+    <input type="checkbox" name="agreementSouthEast"> {{regions[3]}}
+
+    <br>
+
+    <h4>Hvilke(n) annen/andre region(er) får dere pasienter fra?</h4>
+    <input type="checkbox" name="patientFromNorth"> {{regions[0]}}
+    <input type="checkbox" name="patientFromMid"> {{regions[1]}}
+    <input type="checkbox" name="patientFromWest"> {{regions[2]}}
+    <input type="checkbox" name="patientFromSouthEast"> {{regions[3]}}
+
+    <br>
+
+    <h3>Individuell rehabilitering?</h3>
+    <input type="radio" name="individual" > Ja
+    <input type="radio" name="individual" > Nei
+
+    <br>
+
+    <h3>Rehabilitering i grupper?</h3>
+    <input type="radio" name="group" > Ja
+    <input type="radio" name="group" > Nei
+
+    <br>
+
+    <h3>Vanlig varighet for opphold?</h3>
+    <input type="number" name="duration">
+
+    <br>
+
+    <h3>Tilbud om basseng?</h3>
+    <input type="radio" name="swimmingPool" > Ja
+    <input type="radio" name="swimmingPool" > Nei
+
+    <br>
+
+    <h3>Tilrettelagt for rullestolbrukere?</h3>
+    <input type="radio" name="wheelchair" > Ja
+    <input type="radio" name="wheelchair" > Nei
+
+    <br>
+
+    <h3>Beskrivelse av inntakskriterier på døgnplasser</h3>
+
+    <h4>Selvhjulpen i daglige aktiviteter</h4>
+    <input type="radio" name="selfHelpFull" > Ja
+    <input type="radio" name="selfHelpFull" > Nei
+
+    <br>
+
+    <h4>Aldersgrense?</h4>
+    <input type="radio" name="ageRestrictionFull" > Ja
+    <input type="radio" name="ageRestrictionFull" > Nei
+
+    <br>
+
+    <h3>Beskrivelse av inntakskriterier på dagplasser</h3>
+
+    <h4>Selvhjulpen i daglige aktiviteter</h4>
+    <input type="radio" name="selfHelpHalf" > Ja
+    <input type="radio" name="selfHelpHalf" > Nei
+
+    <br>
+
+    <h4>Aldersgrense?</h4>
+    <input type="radio" name="ageRestrictionHalf" > Ja
+    <input type="radio" name="ageRestrictionHalf" > Nei
+
+    <br>
+
+    <button type="submit" name="submit">Send inn</button>
+  </form>
+</div>
