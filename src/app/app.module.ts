@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import {OffersComponent} from './offers/offers.component';
 import { OfferMsComponent } from './offer-ms/offer-ms.component';
+import { IssueComponent } from './issue/issue.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     OffersComponent,
-    OfferMsComponent
+    OfferMsComponent,
+    IssueComponent
   ],
   imports: [
     BrowserModule
