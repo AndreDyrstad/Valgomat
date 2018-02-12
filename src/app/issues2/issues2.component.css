@@ -1,3 +1,6 @@
-.listOfCheckbox{
-  display:inline-block;
+.checkBoxes{
+
+  display: flex;
+  flex-direction: column;
+
 }

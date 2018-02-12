@@ -1,5 +1,4 @@
-
-<h2>{{title}}</h2>
+<h2 xmlns="http://www.w3.org/1999/html">{{title}}</h2>
 
 <form class="fieldset">
 
@@ -10,14 +9,14 @@
   <br>
 
   <h3>Type opphold</h3>
-  <input type="checkbox" name="information"> Informasjon
-  <input type="checkbox" name="judge"> Vurdering
-  <input type="checkbox" name="fastLoss"> Rehabilitering etter raskt funksjonstap
-  <br>
-  <input type="checkbox" name="slowLoss"> Rehabilitering etter gradvis funksjonstap
-  <input type="checkbox" name="adult"> Egne tilbud til voksne pårørende
-  <input type="checkbox" name="child"> Egne tilbud til barn som pårørende
-
+  <div class="checkBoxes">
+    <div><input type="checkbox" name="information"> Informasjon</div>
+    <div><input type="checkbox" name="judge"> Vurdering</div>
+    <div><input type="checkbox" name="fastLoss"> Rehabilitering etter raskt funksjonstap</div>
+    <div><input type="checkbox" name="slowLoss"> Rehabilitering etter gradvis funksjonstap</div>
+    <div><input type="checkbox" name="adult"> Egne tilbud til voksne pårørende</div>
+    <div><input type="checkbox" name="child"> Egne tilbud til barn som pårørende</div>
+  </div>
   <br>
 
   <h3>Antall heldøgnsplasser</h3>
@@ -36,18 +35,20 @@
   <input type="number" name="waiting">
   <br>
   <h3>Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</h3>
-  <input type="checkbox" name="doctor"> Lege
-  <input type="checkbox" name="nurse"> Sykepleier
-  <input type="checkbox" name="helping"> Hjelpepleier/helsefagarbeider
-  <input type="checkbox" name="psychologist"> Klinisk psykolog
-  <input type="checkbox" name="neuropsychologist"> Nevropsykolog
-  <input type="checkbox" name="socialWorker"> Sosionom
-  <input type="checkbox" name="occupationalTherapist"> Ergoterapeut
-  <input type="checkbox" name="physicalTherapist"> Fysioterapeut
-  <input type="checkbox" name="nutritionist"> Ernæringsfysiolog
-  <input type="checkbox" name="urotherapist"> Uroterapeut
-  <input type="checkbox" name="speechTherapist"> Logoped
-  <input type="checkbox" name="sportsEducator"> Idrettspedagog/idrettsfysiolog el. lignende
+  <div class="checkBoxes">
+    <div><input type="checkbox" name="doctor"> Lege </div>
+    <div><input type="checkbox" name="nurse"> Sykepleier </div>
+    <div><input type="checkbox" name="helping"> Hjelpepleier/helsefagarbeider </div>
+    <div><input type="checkbox" name="psychologist"> Klinisk psykolog </div>
+    <div><input type="checkbox" name="neuropsychologist"> Nevropsykolog </div>
+    <div><input type="checkbox" name="socialWorker"> Sosionom </div>
+    <div><input type="checkbox" name="occupationalTherapist"> Ergoterapeut </div>
+    <div><input type="checkbox" name="physicalTherapist"> Fysioterapeut </div>
+    <div><input type="checkbox" name="nutritionist"> Ernæringsfysiolog </div>
+    <div><input type="checkbox" name="urotherapist"> Uroterapeut </div>
+    <div><input type="checkbox" name="speechTherapist"> Logoped </div>
+    <div><input type="checkbox" name="sportsEducator"> Idrettspedagog/idrettsfysiolog el. lignende </div>
+  </div>
   <br>
   <button type="submit" name="submit">Submit</button>
 </form>

@@ -5,18 +5,19 @@
 
     <h3>Helseregion</h3>
     <h4>Hvilke(n) helseregion(er) er et gjort avtale med?</h4>
-    <input type="checkbox" name="agreementNorth"> {{regions[0]}}
-    <input type="checkbox" name="agreementMid"> {{regions[1]}}
-    <input type="checkbox" name="agreementWest"> {{regions[2]}}
-    <input type="checkbox" name="agreementSouthEast"> {{regions[3]}}
-
+    <div class="checkBoxes">
+      <div><input type="checkbox" name="agreementNorth"> {{regions[0]}}</div>
+      <div><input type="checkbox" name="agreementMid"> {{regions[1]}}</div>
+      <div><input type="checkbox" name="agreementWest"> {{regions[2]}}</div>
+      <div><input type="checkbox" name="agreementSouthEast"> {{regions[3]}}</div>
+    </div>
     <br>
 
     <h4>Hvilke(n) annen/andre region(er) får dere pasienter fra?</h4>
-    <input type="checkbox" name="patientFromNorth"> {{regions[0]}}
-    <input type="checkbox" name="patientFromMid"> {{regions[1]}}
-    <input type="checkbox" name="patientFromWest"> {{regions[2]}}
-    <input type="checkbox" name="patientFromSouthEast"> {{regions[3]}}
+    <div><input type="checkbox" name="patientFromNorth"> {{regions[0]}}</div>
+    <div><input type="checkbox" name="patientFromMid"> {{regions[1]}}</div>
+    <div> <input type="checkbox" name="patientFromWest"> {{regions[2]}}</div>
+    <div><input type="checkbox" name="patientFromSouthEast"> {{regions[3]}}</div>
 
     <br>
 
