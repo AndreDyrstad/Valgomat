@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IssueComponent implements OnInit {
 
+  title = 'Problemstillinger dere har rehabiliteringstilbud for';
   constructor() { }
 
   ngOnInit() {

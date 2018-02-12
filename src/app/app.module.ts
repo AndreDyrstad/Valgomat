@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import {OffersComponent} from './offers/offers.component';
 import { OfferMsComponent } from './offer-ms/offer-ms.component';
 import { IssueComponent } from './issue/issue.component';
+import { YesNoComponent } from './yes-no/yes-no.component';
+import { Issues2Component } from './issues2/issues2.component';
 
 
 @NgModule({
@@ -13,7 +15,9 @@ import { IssueComponent } from './issue/issue.component';
     AppComponent,
     OffersComponent,
     OfferMsComponent,
-    IssueComponent
+    IssueComponent,
+    YesNoComponent,
+    Issues2Component
   ],
   imports: [
     BrowserModule
