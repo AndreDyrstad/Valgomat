@@ -1,54 +1,55 @@
-<h2 xmlns="http://www.w3.org/1999/html">{{title}}</h2>
+<div class="outerContainer">
 
-<form class="fieldset">
+  <h2>{{title}}</h2>
 
-  <h3>Inntak gruppevis for personer med MS?</h3>
-  <input type="radio" name="group" > Ja
-  <input type="radio" name="group" > Nei
+  <form class="fieldset">
 
-  <br>
+    <h3>Inntak gruppevis for personer med MS?</h3>
+    <input type="radio" name="group" > Ja
+    <input type="radio" name="group" > Nei
 
-  <h3>Type opphold</h3>
-  <div class="checkBoxes">
-    <div><input type="checkbox" name="information"> Informasjon</div>
-    <div><input type="checkbox" name="judge"> Vurdering</div>
-    <div><input type="checkbox" name="fastLoss"> Rehabilitering etter raskt funksjonstap</div>
-    <div><input type="checkbox" name="slowLoss"> Rehabilitering etter gradvis funksjonstap</div>
-    <div><input type="checkbox" name="adult"> Egne tilbud til voksne pårørende</div>
-    <div><input type="checkbox" name="child"> Egne tilbud til barn som pårørende</div>
+    <h3>Type opphold</h3>
+    <div class="checkBoxes">
+      <div><input type="checkbox" name="information"> Informasjon</div>
+      <div><input type="checkbox" name="judge"> Vurdering</div>
+      <div><input type="checkbox" name="fastLoss"> Rehabilitering etter raskt funksjonstap</div>
+      <div><input type="checkbox" name="slowLoss"> Rehabilitering etter gradvis funksjonstap</div>
+      <div><input type="checkbox" name="adult"> Egne tilbud til voksne pårørende</div>
+      <div><input type="checkbox" name="child"> Egne tilbud til barn som pårørende</div>
+    </div>
+
+
+    <h3>Antall heldøgnsplasser</h3>
+    <input type="number" name="24hour">
+
+    <h3>Antall heldøgnsplasser som er tiltenkt MS</h3>
+    <input type="number" name="24hourMS">
+
+    <h3>Antall dagplasser</h3>
+    <input type="number" name="12hour">
+
+    <h3>Antall dagplasser som er tiltenkt MS</h3>
+    <input type="number" name="12hourMS">
+
+    <h3>Vanlig ventetid for MS-rehabilitering (i uker)</h3>
+    <input type="number" name="waiting">
+
+    <h3>Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</h3>
+    <div class="checkBoxes">
+      <div><input type="checkbox" name="doctor"> Lege </div>
+      <div><input type="checkbox" name="nurse"> Sykepleier </div>
+      <div><input type="checkbox" name="helping"> Hjelpepleier/helsefagarbeider </div>
+      <div><input type="checkbox" name="psychologist"> Klinisk psykolog </div>
+      <div><input type="checkbox" name="neuropsychologist"> Nevropsykolog </div>
+      <div><input type="checkbox" name="socialWorker"> Sosionom </div>
+      <div><input type="checkbox" name="occupationalTherapist"> Ergoterapeut </div>
+      <div><input type="checkbox" name="physicalTherapist"> Fysioterapeut </div>
+      <div><input type="checkbox" name="nutritionist"> Ernæringsfysiolog </div>
+      <div><input type="checkbox" name="urotherapist"> Uroterapeut </div>
+      <div><input type="checkbox" name="speechTherapist"> Logoped </div>
+      <div><input type="checkbox" name="sportsEducator"> Idrettspedagog/idrettsfysiolog el. lignende </div>
+    </div>
+
+    <button type="submit" name="submit">Submit</button>
+  </form>
   </div>
-  <br>
-
-  <h3>Antall heldøgnsplasser</h3>
-  <input type="number" name="24hour">
-  <br>
-  <h3>Antall heldøgnsplasser som er tiltenkt MS</h3>
-  <input type="number" name="24hourMS">
-  <br>
-  <h3>Antall dagplasser</h3>
-  <input type="number" name="12hour">
-  <br>
-  <h3>Antall dagplasser som er tiltenkt MS</h3>
-  <input type="number" name="12hourMS">
-  <br>
-  <h3>Vanlig ventetid for MS-rehabilitering (i uker)</h3>
-  <input type="number" name="waiting">
-  <br>
-  <h3>Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</h3>
-  <div class="checkBoxes">
-    <div><input type="checkbox" name="doctor"> Lege </div>
-    <div><input type="checkbox" name="nurse"> Sykepleier </div>
-    <div><input type="checkbox" name="helping"> Hjelpepleier/helsefagarbeider </div>
-    <div><input type="checkbox" name="psychologist"> Klinisk psykolog </div>
-    <div><input type="checkbox" name="neuropsychologist"> Nevropsykolog </div>
-    <div><input type="checkbox" name="socialWorker"> Sosionom </div>
-    <div><input type="checkbox" name="occupationalTherapist"> Ergoterapeut </div>
-    <div><input type="checkbox" name="physicalTherapist"> Fysioterapeut </div>
-    <div><input type="checkbox" name="nutritionist"> Ernæringsfysiolog </div>
-    <div><input type="checkbox" name="urotherapist"> Uroterapeut </div>
-    <div><input type="checkbox" name="speechTherapist"> Logoped </div>
-    <div><input type="checkbox" name="sportsEducator"> Idrettspedagog/idrettsfysiolog el. lignende </div>
-  </div>
-  <br>
-  <button type="submit" name="submit">Submit</button>
-</form>
