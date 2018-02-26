@@ -14,6 +14,8 @@ export class Issues2Component {
   getData: string;
   postData: string;
   result: string;
+  boxesText = ['Arm-/håndfunksjon', 'Spastisitet', 'Smerte', 'Fatigue', 'Blærefunksjonen', 'Tarmfunksjon', 'Depresjon/angst', 'Kognitiv funksjon', 'Søvn', 'Tale/språk/svelg', 'Lungefunksjon', 'Seksualfunksjon'];
+
 
   registerUser(form: NgForm) {
     this._httpService.sendIssues2(form.value)
