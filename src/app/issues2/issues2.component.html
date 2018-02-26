@@ -1,22 +1,12 @@
 <div class="outerContainer">
   <h2>{{title}}</h2>
 
-  <form class="fieldset">
+  <form #signupForm="ngForm" (ngSubmit) = "registerUser(signupForm)">
+    <div *ngFor="let box of boxesText">
+      <input ngModel type="checkbox" id="{{box}}" name="{{box}}">{{box}}
 
-    <h3>Har dere tilbud ved problemstilliger knyttet til:</h3>
-    <div class="checkBoxes">
-      <div><input type="checkbox" name="arm"> Arm-/håndfunksjon</div>
-      <div><input type="checkbox" name="spastisitet"> Spastisitet</div>
-      <div><input type="checkbox" name="pain"> Smerte</div>
-      <div><input type="checkbox" name="fatigue"> Fatigue</div>
-      <div><input type="checkbox" name="blather"> Blærefunksjonen</div>
-      <div><input type="checkbox" name="intestine"> Tarmfunksjon</div>
-      <div><input type="checkbox" name="depression"> Depresjon/angst</div>
-      <div><input type="checkbox" name="kognitiv"> Kognitiv funksjon</div>
-      <div><input type="checkbox" name="sleep"> Søvn</div>
-      <div><input type="checkbox" name="speach"> Tale/språk/svelg</div>
-      <div><input type="checkbox" name="lungs"> Lungefunksjon</div>
-      <div><input type="checkbox" name="sexual"> Seksualfunksjon</div>
     </div>
+
+    <button type="submit" name="submit" id="submit">Send inn</button>
   </form>
 </div>

@@ -1,0 +1,153 @@
+<form #signupForm="ngForm" (ngSubmit) = "registerUser(signupForm)">
+
+  <div class="outerContainer">
+    <h2>{{title}}</h2>
+
+      <h3>Helseregion</h3>
+      <h4>Hvilke(n) helseregion(er) er et gjort avtale med?</h4>
+      <div class="checkBoxes">
+        <div><input ngModel type="checkbox" name="agreementNorth"> {{regions[0]}}</div>
+        <div><input ngModel type="checkbox" name="agreementMid"> {{regions[1]}}</div>
+        <div><input ngModel type="checkbox" name="agreementWest"> {{regions[2]}}</div>
+        <div><input ngModel type="checkbox" name="agreementSouthEast"> {{regions[3]}}</div>
+      </div>
+
+      <h4>Hvilke(n) annen/andre region(er) får dere pasienter fra?</h4>
+      <div><input ngModel type="checkbox" name="patientFromNorth"> {{regions[0]}}</div>
+      <div><input ngModel type="checkbox" name="patientFromMid"> {{regions[1]}}</div>
+      <div><input ngModel type="checkbox" name="patientFromWest"> {{regions[2]}}</div>
+      <div><input ngModel type="checkbox" name="patientFromSouthEast"> {{regions[3]}}</div>
+
+
+      <h3>Individuell rehabilitering?</h3>
+      <input  type="radio" name="individual" > Ja
+      <input  type="radio" name="individual" > Nei
+
+      <h3>Rehabilitering i grupper?</h3>
+      <input  type="radio" name="group" > Ja
+      <input  type="radio" name="group" > Nei
+
+      <h3>Vanlig varighet for opphold?</h3>
+      <input ngModel type="number" name="duration">
+
+
+      <h3>Tilbud om basseng?</h3>
+      <input type="radio" name="swimmingPool" > Ja
+      <input  type="radio" name="swimmingPool" > Nei
+
+
+      <h3>Tilrettelagt for rullestolbrukere?</h3>
+      <input ngModel type="radio" name="wheelchair" > Ja
+      <input ngModel type="radio" name="wheelchair" > Nei
+
+
+      <h3>Beskrivelse av inntakskriterier på døgnplasser</h3>
+
+      <h4>Selvhjulpen i daglige aktiviteter</h4>
+      <input  type="radio" name="selfHelpFull" > Ja
+      <input  type="radio" name="selfHelpFull" > Nei
+
+
+      <h4>Aldersgrense?</h4>
+      <input  type="radio" name="ageRestrictionFull" > Ja
+      <input  type="radio" name="ageRestrictionFull" > Nei
+
+
+      <h3>Beskrivelse av inntakskriterier på dagplasser</h3>
+
+      <h4>Selvhjulpen i daglige aktiviteter</h4>
+      <input  type="radio" name="selfHelpHalf" > Ja
+      <input  type="radio" name="selfHelpHalf" > Nei
+
+
+      <h4>Aldersgrense? (noen gir kun rehab under 35 år) </h4>
+      <input  type="radio" name="ageRestrictionHalf" > Ja
+      <input  type="radio" name="ageRestrictionHalf" > Nei
+
+  </div>
+
+
+
+
+  <div class="outerContainer">
+
+    <h2>{{title}}</h2>
+
+
+      <h3>Inntak gruppevis for personer med MS?</h3>
+      <input  type="radio" id="group" name="group" > Ja
+      <input  type="radio" id="group" name="group" > Nei
+
+      <h3>Type opphold</h3>
+      <div *ngFor="let box of type">
+        <input ngModel type="checkbox" id="{{box}}" name="{{box}}"> {{box}}
+      </div>
+
+      <h3>Antall heldøgnsplasser</h3>
+      <input ngModel type="number" id="24hour" name="24hour">
+
+      <h3>Antall heldøgnsplasser som er tiltenkt MS</h3>
+      <input ngModel type="number" id="24hourMS" name="24hourMS">
+
+      <h3>Antall dagplasser</h3>
+      <input ngModel type="number" id="12hour" name="12hour">
+
+      <h3>Antall dagplasser som er tiltenkt MS</h3>
+      <input ngModel type="number" id="12hourMS" name="12hourMS">
+
+      <h3>Vanlig ventetid for MS-rehabilitering (i uker)</h3>
+      <input ngModel type="number" id="waiting" name="waiting">
+
+      <h3>Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</h3>
+      <div *ngFor="let box of profesion">
+        <input ngModel type="checkbox" id="{{box}}" name="{{box}}"> {{box}}
+      </div>
+
+  </div>
+
+
+
+  <div class="outerContainer">
+    <h2>{{title}}</h2>
+
+      <h3>Kryss av i boksene på listen under for de punktene der dere har et tilbud</h3>
+
+      <h3>Skole/utdanning/arbeidsrettet rehabilitering</h3>
+      <input  type="radio" name="education" > Ja
+      <input  type="radio" name="education" > Nei
+
+      <h3>Daglige funksjoner</h3>
+      <ul>
+        <li>Vurdering av hjelpemidler</li>
+        <li>Vurdering av daglige aktiviteter</li>
+        <li>Samhandling med primærhelsetjenesten</li>
+      </ul>
+
+      <input  type="radio" name="dailyFunctions" > Ja
+      <input  type="radio" name="dailyFunctions" > Nei
+
+      <h3>Livsstil</h3>
+      <ul>
+        <li>Utforskning av muligheter for nye former for fysisk aktivitet</li>
+        <li>Kost/ernæringsveiledning</li>
+        <li>Stressmestring / "Å leve med MS"</li>
+        <li>Røykeslutt</li>
+      </ul>
+
+      <input  type="radio" name="lifeStyle" > Ja
+      <input  type="radio" name="lifeStyle" > Nei
+  </div>
+
+
+
+  <div class="outerContainer">
+    <h2>{{title}}</h2>
+
+      <div *ngFor="let box of boxesText">
+        <input ngModel type="checkbox" id="{{box}}" name="{{box}}"> {{box}}
+
+      </div>
+
+      <button type="submit" name="submit" id="submit">Send inn</button>
+  </div>
+</form>

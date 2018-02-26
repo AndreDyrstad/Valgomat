@@ -1,27 +1,31 @@
 import { Component } from '@angular/core';
-import {NgForm} from '@angular/forms';
-import 'rxjs/add/operator/map';
 import {HttpService} from '../http-service';
+import {NgForm} from '@angular/forms';
 
 @Component({
-  selector: 'app-offer-ms',
-  templateUrl: './offer-ms.component.html',
-  styleUrls: ['./offer-ms.component.css'],
-  providers: [HttpService]
+  selector: 'app-center',
+  templateUrl: './center.component.html',
+  styleUrls: ['./center.component.css']
 })
-export class OfferMsComponent {
-
-  title = 'Tilbud til personer med MS';
+export class CenterComponent {
+  boxes = ['arm', 'spastisitet', 'pain', 'fatigue', 'blather', 'intestine', 'depression', 'kognitiv', 'sleep', 'speech', 'lungs', 'sexual'];
+  boxesText = ['Arm-/håndfunksjon', 'Spastisitet', 'Smerte', 'Fatigue', 'Blærefunksjonen', 'Tarmfunksjon', 'Depresjon/angst', 'Kognitiv funksjon', 'Søvn', 'Tale/språk/svelg', 'Lungefunksjon', 'Seksualfunksjon'];
+  title = 'Tilbud ved problemstillinger knyttet til';
+  regions = ['Helse Nord', 'Helse midt', 'Helse vest', 'Helse Sør-Øst'];
   type = ['Informasjon', 'Vurdering', 'Rehabilitering etter raskt funksjonstap', 'Rehabilitering etter gradvis funksjonstap', 'Egne tilbud til voksne pårørende', 'Egne tilbud til barn som pårørende'];
   profesion = ['Lege', 'Sykepleier', 'Hjelpepleier/helsefagarbeider', 'Klinisk psykolog', 'Nevropsykolog', 'Sosionom' , 'Ergoterapeut', 'Fysioterapeut', 'Ernæringsfysiolog', 'Uroterapeut', 'Logoped', 'Idrettspedagog'];
+
   constructor (private _httpService: HttpService) {}
   getData: string;
   postData: string;
-  result: string;
 
   registerUser(form: NgForm) {
-    this.result = JSON.stringify(form.value);
-    console.log(this.result);
+    this._httpService.sendIssues2(form.value)
+      .subscribe(
+        data => this.postData = JSON.stringify(data),
+        error => alert(error),
+        () => console.log('Done!')
+      );
   }
   getTest() {
     this._httpService.getData()
@@ -40,4 +44,3 @@ export class OfferMsComponent {
       );
   }
 }
-
