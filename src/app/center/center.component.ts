@@ -8,12 +8,17 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./center.component.css']
 })
 export class CenterComponent {
-  boxes = ['arm', 'spastisitet', 'pain', 'fatigue', 'blather', 'intestine', 'depression', 'kognitiv', 'sleep', 'speech', 'lungs', 'sexual'];
-  boxesText = ['Arm-/håndfunksjon', 'Spastisitet', 'Smerte', 'Fatigue', 'Blærefunksjonen', 'Tarmfunksjon', 'Depresjon/angst', 'Kognitiv funksjon', 'Søvn', 'Tale/språk/svelg', 'Lungefunksjon', 'Seksualfunksjon'];
+ listOfIssues;
+ listOfProfessions;
+ listOfType;
+ a = this.getIssues();
+ b = this.getProfession();
+ c = this.getType()
+
+
   title = 'Tilbud ved problemstillinger knyttet til';
   regions = ['Helse Nord', 'Helse midt', 'Helse vest', 'Helse Sør-Øst'];
   type = ['Informasjon', 'Vurdering', 'Rehabilitering etter raskt funksjonstap', 'Rehabilitering etter gradvis funksjonstap', 'Egne tilbud til voksne pårørende', 'Egne tilbud til barn som pårørende'];
-  profesion = ['Lege', 'Sykepleier', 'Hjelpepleier/helsefagarbeider', 'Klinisk psykolog', 'Nevropsykolog', 'Sosionom' , 'Ergoterapeut', 'Fysioterapeut', 'Ernæringsfysiolog', 'Uroterapeut', 'Logoped', 'Idrettspedagog'];
 
   constructor (private _httpService: HttpService) {}
   getData: string;
@@ -39,6 +44,30 @@ export class CenterComponent {
     this._httpService.sendData()
       .subscribe(
         data => this.postData = JSON.stringify(data),
+        error => alert(error),
+        () => console.log('Done!')
+      );
+  }
+  getIssues() {
+    this._httpService.getLocalIssue()
+      .subscribe(
+        data => this.listOfIssues = data.issues,
+        error => alert(error),
+        () => console.log('Done!')
+      );
+  }
+  getProfession() {
+    this._httpService.getLocalProfession()
+      .subscribe(
+        data => this.listOfProfessions = data.profession,
+        error => alert(error),
+        () => console.log('Done!')
+      );
+  }
+  getType() {
+    this._httpService.getLocalType()
+      .subscribe(
+        data => this.listOfType = data.type,
         error => alert(error),
         () => console.log('Done!')
       );

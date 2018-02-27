@@ -1,0 +1,52 @@
+{
+  "issues": [
+    {
+      "id": "arm",
+      "name": "Arm-/håndfunksjon"
+    },
+    {
+    "id": "Spastisitet",
+    "name": "spastisitet"
+    },
+    {
+    "id": "pain",
+    "name": "Smerte"
+    },
+    {
+    "id": "fatigue",
+    "name": "Fatigue"
+    },
+    {
+    "id": "blather",
+    "name": "Blærefunksjonen"
+    },
+    {
+    "id": "intestine",
+    "name": "Tarmfunksjon"
+    },
+    {
+    "id": "depression",
+    "name": "Depresjon/angst"
+    },
+    {
+    "id": "kognitiv",
+    "name": "Kognitiv funksjon"
+    },
+    {
+    "id": "sleep",
+    "name": "Søvn"
+    },
+    {
+    "id": "speech",
+    "name": "Tale/språk/svelg"
+    },
+    {
+    "id": "lungs",
+    "name": "Lungefunksjon"
+    },
+    {
+    "id": "sexual",
+    "name": "Seksualfunksjon"
+    }
+  ]
+}

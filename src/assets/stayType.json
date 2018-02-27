@@ -1,0 +1,28 @@
+{
+  "type": [
+    {
+      "id": "info",
+      "name": "Informasjon"
+    },
+    {
+      "id": "vurdering",
+      "name": "Vurdering"
+    },
+    {
+      "id": "raskFunksjonstap",
+      "name": "Rehabilitering etter raskt funksjonstap"
+    },
+    {
+      "id": "gradvisFunksjonstap",
+      "name": "Rehabilitering etter gradvis funksjonstap"
+    },
+    {
+      "id": "voksendePaaroerende",
+      "name": "Egne tilbud til voksne pårørende"
+    },
+    {
+      "id": "barnPaaroerende",
+      "name": "Egne tilbud til barn som pårørende"
+    }
+  ]
+}

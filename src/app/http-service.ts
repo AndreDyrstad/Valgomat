@@ -19,6 +19,15 @@ export class HttpService{
     return this._http.post('http://localhost:3000/center', json).map(res => res);
   }
   sendIssues2(json) {
-    return this._http.post('http://localhost:3000/center/issues2', json).map(res => res);
+    return this._http.post('http://localhost:3000/center', json).map(res => res);
+  }
+  getLocalIssue() {
+    return this._http.get('http://localhost:4200/assets/issues2.json').map(res => res);
+  }
+  getLocalProfession() {
+    return this._http.get('http://localhost:4200/assets/profession.json').map(res => res);
+  }
+  getLocalType() {
+    return this._http.get('http://localhost:4200/assets/stayType.json').map(res => res);
   }
 }

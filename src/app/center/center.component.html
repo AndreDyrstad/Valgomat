@@ -47,7 +47,6 @@
       <input  type="radio" name="selfHelpFull" > Ja
       <input  type="radio" name="selfHelpFull" > Nei
 
-
       <h4>Aldersgrense?</h4>
       <input  type="radio" name="ageRestrictionFull" > Ja
       <input  type="radio" name="ageRestrictionFull" > Nei
@@ -79,8 +78,8 @@
       <input  type="radio" id="group" name="group" > Nei
 
       <h3>Type opphold</h3>
-      <div *ngFor="let box of type">
-        <input ngModel type="checkbox" id="{{box}}" name="{{box}}"> {{box}}
+      <div *ngFor="let type of listOfType">
+        <input ngModel type="checkbox" id="{{type.id}}" name="{{type.id}}"> {{type.name}}
       </div>
 
       <h3>Antall heldøgnsplasser</h3>
@@ -99,8 +98,8 @@
       <input ngModel type="number" id="waiting" name="waiting">
 
       <h3>Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</h3>
-      <div *ngFor="let box of profesion">
-        <input ngModel type="checkbox" id="{{box}}" name="{{box}}"> {{box}}
+      <div *ngFor="let profession of listOfProfessions">
+        <input ngModel type="checkbox" id="{{profession.id}}" name="{{profession.id}}"> {{profession.name}}
       </div>
 
   </div>
@@ -143,9 +142,8 @@
   <div class="outerContainer">
     <h2>{{title}}</h2>
 
-      <div *ngFor="let box of boxesText">
-        <input ngModel type="checkbox" id="{{box}}" name="{{box}}"> {{box}}
-
+      <div *ngFor="let issues of listOfIssues">
+        <input ngModel type="checkbox" id="{{issues.id}}" name="{{issues.id}}"> {{issues.name}}
       </div>
 
       <button type="submit" name="submit" id="submit">Send inn</button>

@@ -1,0 +1,40 @@
+{
+  "profession": [
+    {
+      "id": "lege",
+      "name": "Lege"
+    },
+    {
+      "id": "sykepleier",
+      "name": "Sykepleier"
+    },
+    {
+      "id": "hjelpepleier",
+      "name": "Hjelpepleier/helsefagarbeider"
+    },
+    {
+      "id": "psykolog",
+      "name": "Klinisk psykolog"
+    },
+    {
+      "id": "nevropsykolog",
+      "name": "Nevropsykolog"
+    },
+    {
+      "id": "sosionom",
+      "name": "Sosionom"
+    },
+    {
+      "id": "ergoteraoeut",
+      "name": "Ergoterapeut"
+    },
+    {
+      "id": "uroterapeut",
+      "name": "Uroterapeut"
+    },
+    {
+      "id": "logoped",
+      "name": "Logoped"
+    }
+  ]
+}
