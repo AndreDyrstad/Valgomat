@@ -1,0 +1,35 @@
+[
+  {
+    "id": "individuell",
+    "name": "Individuell rehabilitering?"
+  },
+  {
+    "id": "gruppe",
+    "name": "Rehabilitering i grupper?"
+  },
+  {
+    "id": "basseng",
+    "name": "Tilbud om basseng?"
+  },
+  {
+    "id": "rullestol",
+    "name": "Tilrettelagt for rullestolbrukere?"
+  },
+  {
+    "id": "dognSelvhjulpen",
+    "name": "På deres døgnplasser, er pasienten selvhjulpen i daglige aktiviteter?"
+  },
+  {
+    "id": "dognAlder",
+    "name": "Har dere noen aldersgrense på deres døgnplasser? (Noen gir bare rehab under 35 år)"
+  },
+  {
+    "id": "dagSelvhjulpen",
+    "name": "På deres døgnplasser, er pasienten selvhjulpen i daglige aktiviteter?"
+  },
+  {
+    "id": "dagAlder",
+    "name": "Har dere noen aldersgrense på deres døgnplasser? (Noen gir bare rehab under 35 år)"
+  }
+]
+

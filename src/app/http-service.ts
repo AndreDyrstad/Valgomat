@@ -21,7 +21,7 @@ export class HttpService{
   sendIssues2(json) {
     return this._http.post('https://valgomatserver.eu-gb.mybluemix.net/center', json).map(res => res);
   }
-  getLocalIssue() {
+  getLocalIssue2() {
     return this._http.get('http://localhost:4200/assets/issues2.json').map(res => res);
   }
   getLocalProfession() {
@@ -29,5 +29,8 @@ export class HttpService{
   }
   getLocalType() {
     return this._http.get('http://localhost:4200/assets/stayType.json').map(res => res);
+  }
+  getLocalIssue() {
+    return this._http.get('http://localhost:4200/assets/issue.json').map(res => res);
   }
 }

@@ -9,13 +9,14 @@ import {Issues2Component} from '../issues2/issues2.component';
   styleUrls: ['./center.component.css']
 })
 export class CenterComponent {
- listOfIssues;
+  listOfIssues;
+ listOfIssues2;
  listOfProfessions;
  listOfType;
- a = this.getIssues();
+ a = this.getIssues2();
  b = this.getProfession();
  c = this.getType();
- // d = this.getTest();
+ d = this.getIssues();
 
   title = 'Tilbud ved problemstillinger knyttet til';
   regions = ['Helse Nord', 'Helse midt', 'Helse vest', 'Helse Sør-Øst'];
@@ -52,6 +53,14 @@ export class CenterComponent {
     this._httpService.getLocalIssue()
       .subscribe(
         data => this.listOfIssues = data,
+        error => alert(error),
+        () => console.log('Done!')
+      );
+  }
+  getIssues2() {
+    this._httpService.getLocalIssue2()
+      .subscribe(
+        data => this.listOfIssues2 = data,
         error => alert(error),
         () => console.log('Done!')
       );
