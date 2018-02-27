@@ -1,5 +1,4 @@
-{
-  "issues": [
+[
     {
       "id": "arm",
       "name": "Arm-/håndfunksjon"
@@ -49,4 +48,4 @@
     "name": "Seksualfunksjon"
     }
   ]
-}
+

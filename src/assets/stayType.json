@@ -1,5 +1,4 @@
-{
-  "type": [
+[
     {
       "id": "info",
       "name": "Informasjon"
@@ -25,4 +24,4 @@
       "name": "Egne tilbud til barn som pårørende"
     }
   ]
-}
+

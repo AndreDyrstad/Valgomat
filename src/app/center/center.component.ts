@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {HttpService} from '../http-service';
 import {NgForm} from '@angular/forms';
+import {Issues2Component} from '../issues2/issues2.component';
 
 @Component({
   selector: 'app-center',
@@ -13,12 +14,11 @@ export class CenterComponent {
  listOfType;
  a = this.getIssues();
  b = this.getProfession();
- c = this.getType()
-
+ c = this.getType();
+ // d = this.getTest();
 
   title = 'Tilbud ved problemstillinger knyttet til';
   regions = ['Helse Nord', 'Helse midt', 'Helse vest', 'Helse Sør-Øst'];
-  type = ['Informasjon', 'Vurdering', 'Rehabilitering etter raskt funksjonstap', 'Rehabilitering etter gradvis funksjonstap', 'Egne tilbud til voksne pårørende', 'Egne tilbud til barn som pårørende'];
 
   constructor (private _httpService: HttpService) {}
   getData: string;
@@ -51,7 +51,7 @@ export class CenterComponent {
   getIssues() {
     this._httpService.getLocalIssue()
       .subscribe(
-        data => this.listOfIssues = data.issues,
+        data => this.listOfIssues = data,
         error => alert(error),
         () => console.log('Done!')
       );
@@ -59,7 +59,7 @@ export class CenterComponent {
   getProfession() {
     this._httpService.getLocalProfession()
       .subscribe(
-        data => this.listOfProfessions = data.profession,
+        data => this.listOfProfessions = data,
         error => alert(error),
         () => console.log('Done!')
       );
@@ -67,7 +67,7 @@ export class CenterComponent {
   getType() {
     this._httpService.getLocalType()
       .subscribe(
-        data => this.listOfType = data.type,
+        data => this.listOfType = data,
         error => alert(error),
         () => console.log('Done!')
       );

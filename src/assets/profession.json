@@ -1,5 +1,4 @@
-{
-  "profession": [
+[
     {
       "id": "lege",
       "name": "Lege"
@@ -37,4 +36,4 @@
       "name": "Logoped"
     }
   ]
-}
+
