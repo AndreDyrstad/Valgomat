@@ -24,20 +24,4 @@ export class Issues2Component {
         () => console.log('Done!')
       );
   }
-  getTest() {
-    this._httpService.getData()
-      .subscribe(
-        data => this.getData = JSON.stringify(data),
-        error => alert(error),
-        () => console.log('Done!')
-      );
-  }
-  postTest() {
-    this._httpService.sendData()
-      .subscribe(
-        data => this.postData = JSON.stringify(data),
-        error => alert(error),
-        () => console.log('Done!')
-      );
-  }
 }

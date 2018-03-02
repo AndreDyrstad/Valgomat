@@ -23,21 +23,5 @@ export class OfferMsComponent {
     this.result = JSON.stringify(form.value);
     console.log(this.result);
   }
-  getTest() {
-    this._httpService.getData()
-      .subscribe(
-        data => this.getData = JSON.stringify(data),
-        error => alert(error),
-        () => console.log('Done!')
-      );
-  }
-  postTest() {
-    this._httpService.sendData()
-      .subscribe(
-        data => this.postData = JSON.stringify(data),
-        error => alert(error),
-        () => console.log('Done!')
-      );
-  }
 }
 

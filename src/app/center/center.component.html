@@ -30,8 +30,8 @@
     <div *ngFor="let issue of listOfIssues">
 
       <h3>{{issue.name}}</h3>
-      <input type="radio" ngModel="{{issue.id}}" value="true" name="{{issue.id}}" > Ja
-      <input type="radio" ngModel="{{issue.id}}" value="false" name="{{issue.id}}" > Nei
+      <input type="radio" ngModel="{{issue.id}}" value=true name="{{issue.id}}" > Ja
+      <input type="radio" ngModel="{{issue.id}}" value=false name="{{issue.id}}" > Nei
 
     </div>
 
@@ -72,7 +72,7 @@
 
       <h3>Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</h3>
       <div *ngFor="let profession of listOfProfessions">
-        <input ngModel type="checkbox" id="{{profession.id}}" name="{{profession.id}}"> {{profession.name}}
+        <input ngModel type="checkbox" [checked]="true" id="{{profession.id}}" name="{{profession.id}}" value=false> {{profession.name}}
       </div>
 
   </div>
