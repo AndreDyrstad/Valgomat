@@ -1,6 +1,15 @@
 <form #signupForm="ngForm" (ngSubmit) = "registerUser(signupForm)">
 
   <div class="outerContainer">
+    <h3>Navn på institusjon/rehabiliteringsavdeling</h3>
+    <input ngModel type="text" id="id" name="id">
+    <h3>Nettadresse</h3>
+    <input ngModel type="text" id="website" name="website">
+    <h3>Telefonnummer</h3>
+    <input ngModel type="number" id="phone" name="phone">
+  </div>
+
+  <div class="outerContainer">
     <h2>Generelt om tilbud on innhold</h2>
 
       <h3>Helseregion</h3>
@@ -21,8 +30,8 @@
     <div *ngFor="let issue of listOfIssues">
 
       <h3>{{issue.name}}</h3>
-      <input  type="radio" ngModel="{{issue.id}}" value="true" name="{{issue.id}}" > Ja
-      <input  type="radio" ngModel="{{issue.id}}" value="false" name="{{issue.id}}" > Nei
+      <input type="radio" ngModel="{{issue.id}}" value="true" name="{{issue.id}}" > Ja
+      <input type="radio" ngModel="{{issue.id}}" value="false" name="{{issue.id}}" > Nei
 
     </div>
 
@@ -104,11 +113,13 @@
   <div class="outerContainer">
     <h2>Tilbid ved problemstillinger knyttet til:</h2>
 
-      <div *ngFor="let issues of listOfIssues2">
-        <input ngModel type="checkbox" id="{{issues.id}}" name="{{issues.id}}"> {{issues.name}}
-      </div>
+    <div *ngFor="let issues of listOfIssues2">
+      <input ngModel type="checkbox" id="{{issues.id}}" name="{{issues.id}}"> {{issues.name}}
+    </div>
 
-
-      <button type="submit" name="submit" id="submit">Send inn</button>
+    <h3>Generelle kommentarer/merknader/tilleggs-opplysninger?</h3>
+    <textarea ngModel name="extra" id="extra"></textarea>
+    <br>
+    <button type="submit" name="submit" id="submit">Send inn</button>
   </div>
 </form>

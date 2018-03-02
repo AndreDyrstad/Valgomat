@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {HttpService} from '../http-service';
 import {NgForm} from '@angular/forms';
-import {Issues2Component} from '../issues2/issues2.component';
 
 @Component({
   selector: 'app-center',
@@ -29,7 +28,7 @@ export class CenterComponent {
     this._httpService.sendIssues2(form.value)
       .subscribe(
         data => this.postData = JSON.stringify(data),
-        error => alert(error),
+        // error => alert(error),
         () => console.log('Done!')
       );
   }

@@ -19,7 +19,8 @@ export class HttpService{
     return this._http.post('https://valgomatserver.eu-gb.mybluemix.net/center', json).map(res => res);
   }
   sendIssues2(json) {
-    return this._http.post('https://valgomatserver.eu-gb.mybluemix.net/center', json).map(res => res);
+    return this._http.post('https://valgomatserver.eu-gb.mybluemix.net/api/center', json).map(res => res);
+   // return this._http.post('http://localhost:3000/api/center', json).map(res => res);
   }
   getLocalIssue2() {
     return this._http.get('http://localhost:4200/assets/issues2.json').map(res => res);
