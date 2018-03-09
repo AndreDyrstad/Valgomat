@@ -1,19 +1,28 @@
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">
+
+
+<h1>Kartlegging av rehabiliteringstilbud i spesialisthelsetjenesten for personer med multippel sklerose (MS)</h1>
+
 <form #signupForm="ngForm" (ngSubmit) = "registerUser(signupForm)">
 
   <div class="outerContainer">
-    <h3>Navn på institusjon/rehabiliteringsavdeling</h3>
-    <input ngModel type="text" id="id" name="id">
-    <h3>Nettadresse</h3>
-    <input ngModel type="text" id="website" name="website">
-    <h3>Telefonnummer</h3>
-    <input ngModel type="number" id="phone" name="phone">
+    <div class="innerContainer">
+      <h2>Informasjon om dere</h2>
+      <p class="question">Navn på institusjon/rehabiliteringsavdeling</p>
+      <input placeholder="Svar" ngModel type="text" id="_id" name="_id">
+      <p class="question">Nettadresse</p>
+      <input placeholder="Svar" ngModel type="text" id="website" name="website">
+      <p class="question">Telefonnummer</p>
+      <input placeholder="Svar" ngModel type="number" id="phone" name="phone">
+    </div>
   </div>
 
-  <div class="outerContainer">
-    <h2>Generelt om tilbud on innhold</h2>
 
-      <h3>Helseregion</h3>
-      <h4>Hvilke(n) helseregion(er) er et gjort avtale med?</h4>
+  <div class="outerContainer">
+    <div class="innerContainer">
+      <h2>Generelt om tilbud og innhold</h2>
+
+      <p class="question">For private institusjoner: Hvilke(n) helseregion(er) er et gjort avtale med?</p>
       <div class="checkBoxes">
         <div><input ngModel type="checkbox" name="agreementNorth"> {{regions[0]}}</div>
         <div><input ngModel type="checkbox" name="agreementMid"> {{regions[1]}}</div>
@@ -21,105 +30,110 @@
         <div><input ngModel type="checkbox" name="agreementSouthEast"> {{regions[3]}}</div>
       </div>
 
-      <h4>Hvilke(n) annen/andre region(er) får dere pasienter fra?</h4>
+      <p class="question">Hvilke(n) annen/andre region(er) får dere pasienter fra?</p>
       <div><input ngModel type="checkbox" name="patientFromNorth"> {{regions[0]}}</div>
       <div><input ngModel type="checkbox" name="patientFromMid"> {{regions[1]}}</div>
       <div><input ngModel type="checkbox" name="patientFromWest"> {{regions[2]}}</div>
       <div><input ngModel type="checkbox" name="patientFromSouthEast"> {{regions[3]}}</div>
 
-    <div *ngFor="let issue of listOfIssues">
+      <div *ngFor="let issue of listOfIssues">
 
-      <h3>{{issue.name}}</h3>
-      <input type="radio" ngModel="{{issue.id}}" value=true name="{{issue.id}}" > Ja
-      <input type="radio" ngModel="{{issue.id}}" value=false name="{{issue.id}}" > Nei
+        <p class="question">{{issue.name}}</p>
+        <input type="radio" ngModel="{{issue.id}}" value=true name="{{issue.id}}" > Ja
+        <input type="radio" ngModel="{{issue.id}}" value=false name="{{issue.id}}" > Nei
 
-    </div>
-
-
-    <h3>Vanlig varighet for opphold?</h3>
-    <input ngModel type="number" name="duration">
-
-  </div>
-
-  <div class="outerContainer">
-
-    <h2>Tilbud til personer med MS</h2>
-
-
-      <h3>Inntak gruppevis for personer med MS?</h3>
-      <input  type="radio" ngModel="group" value="true"  name="group" > Ja
-      <input  type="radio" ngModel="group" value="false" name="group" > Nei
-
-      <h3>Type opphold</h3>
-      <div *ngFor="let type of listOfType">
-        <input ngModel type="checkbox" id="{{type.id}}" name="{{type.id}}"> {{type.name}}
       </div>
 
-      <h3>Antall heldøgnsplasser</h3>
-      <input ngModel type="number" id="24hour" name="24hour">
 
-      <h3>Antall heldøgnsplasser som er tiltenkt MS</h3>
-      <input ngModel type="number" id="24hourMS" name="24hourMS">
+    <p class="question">Vanlig varighet for opphold?</p>
+    <input placeholder="Svar" ngModel type="number" name="duration">
 
-      <h3>Antall dagplasser</h3>
-      <input ngModel type="number" id="12hour" name="12hour">
+    </div>
+  </div>
 
-      <h3>Antall dagplasser som er tiltenkt MS</h3>
-      <input ngModel type="number" id="12hourMS" name="12hourMS">
+  <div class="outerContainer">
+    <div class="innerContainer">
 
-      <h3>Vanlig ventetid for MS-rehabilitering (i uker)</h3>
-      <input ngModel type="number" id="waiting" name="waiting">
+      <h2>Tilbud til personer med MS</h2>
 
-      <h3>Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</h3>
-      <div *ngFor="let profession of listOfProfessions">
-        <input ngModel type="checkbox" [checked]="true" id="{{profession.id}}" name="{{profession.id}}" value=false> {{profession.name}}
+        <p class="question">Inntak gruppevis for personer med MS?</p>
+        <input  type="radio" ngModel="group" value="true"  name="group" > Ja
+        <input  type="radio" ngModel="group" value="false" name="group" > Nei
+
+        <p class="question">Type opphold</p>
+        <div *ngFor="let type of listOfType">
+          <input placeholder="Svar" ngModel type="checkbox" id="{{type.id}}" name="{{type.id}}"> {{type.name}}
+        </div>
+
+        <p class="question">Antall heldøgnsplasser</p>
+        <input placeholder="Svar" ngModel type="number" id="24hour" name="24hour">
+
+        <p class="question">Antall heldøgnsplasser som er tiltenkt MS</p>
+        <input placeholder="Svar" ngModel type="number" id="24hourMS" name="24hourMS">
+
+        <p class="question">Antall dagplasser</p>
+        <input placeholder="Svar" ngModel type="number" id="12hour" name="12hour">
+
+        <p class="question">Antall dagplasser som er tiltenkt MS</p>
+        <input placeholder="Svar" ngModel type="number" id="12hourMS" name="12hourMS">
+
+        <p class="question">Vanlig ventetid for MS-rehabilitering (i uker)</p>
+        <input placeholder="Svar" ngModel type="number" id="waiting" name="waiting">
+
+        <p class="question">Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</p>
+        <div *ngFor="let profession of listOfProfessions">
+          <input ngModel type="checkbox" [checked]="true" id="{{profession.id}}" name="{{profession.id}}" value=false> {{profession.name}}
+        </div>
+
+    </div>
+  </div>
+
+  <div class="outerContainer">
+    <div class="innerContainer">
+      <h2>Problemstillinger dere har rehabiliteringstilbud for:</h2>
+
+        <p>Kryss av i boksene på listen under for de punktene der dere har et tilbud</p>
+
+        <p class="question">Skole/utdanning/arbeidsrettet rehabilitering</p>
+        <input  type="radio" ngModel="education" value="true" name="education" > Ja
+        <input  type="radio" ngModel="education" value="false" name="education" > Nei
+
+        <p class="question">Daglige funksjoner</p>
+        <ul>
+          <li>Vurdering av hjelpemidler</li>
+          <li>Vurdering av daglige aktiviteter</li>
+          <li>Samhandling med primærhelsetjenesten</li>
+        </ul>
+
+        <input  type="radio" ngModel="dailyFunctions" value="true" name="dailyFunctions" > Ja
+        <input  type="radio" ngModel="dailyFunctions" value="false" name="dailyFunctions" > Nei
+
+        <p class="question">Livsstil</p>
+        <ul>
+          <li>Utforskning av muligheter for nye former for fysisk aktivitet</li>
+          <li>Kost/ernæringsveiledning</li>
+          <li>Stressmestring / "Å leve med MS"</li>
+          <li>Røykeslutt</li>
+        </ul>
+
+        <input  type="radio" ngModel="lifeStyle" value="true" name="lifeStyle" > Ja
+        <input  type="radio" ngModel="lifeStyle" value="false" name="lifeStyle" > Nei
+    </div>
+  </div>
+
+
+  <div class="outerContainer">
+    <div class="innerContainer">
+      <h2>Tilbud ved problemstillinger knyttet til:</h2>
+
+      <div *ngFor="let issues of listOfIssues2">
+        <input ngModel type="checkbox" id="{{issues.id}}" name="{{issues.id}}"> {{issues.name}}
       </div>
 
-  </div>
-
-  <div class="outerContainer">
-    <h2>Problemstillinger dere har rehabiliteringstilbud for:</h2>
-
-      <h3>Kryss av i boksene på listen under for de punktene der dere har et tilbud</h3>
-
-      <h3>Skole/utdanning/arbeidsrettet rehabilitering</h3>
-      <input  type="radio" ngModel="education" value="true" name="education" > Ja
-      <input  type="radio" ngModel="education" value="false" name="education" > Nei
-
-      <h3>Daglige funksjoner</h3>
-      <ul>
-        <li>Vurdering av hjelpemidler</li>
-        <li>Vurdering av daglige aktiviteter</li>
-        <li>Samhandling med primærhelsetjenesten</li>
-      </ul>
-
-      <input  type="radio" ngModel="dailyFunctions" value="true" name="dailyFunctions" > Ja
-      <input  type="radio" ngModel="dailyFunctions" value="false" name="dailyFunctions" > Nei
-
-      <h3>Livsstil</h3>
-      <ul>
-        <li>Utforskning av muligheter for nye former for fysisk aktivitet</li>
-        <li>Kost/ernæringsveiledning</li>
-        <li>Stressmestring / "Å leve med MS"</li>
-        <li>Røykeslutt</li>
-      </ul>
-
-      <input  type="radio" ngModel="lifeStyle" value="true" name="lifeStyle" > Ja
-      <input  type="radio" ngModel="lifeStyle" value="false" name="lifeStyle" > Nei
-  </div>
-
-
-
-  <div class="outerContainer">
-    <h2>Tilbid ved problemstillinger knyttet til:</h2>
-
-    <div *ngFor="let issues of listOfIssues2">
-      <input ngModel type="checkbox" id="{{issues.id}}" name="{{issues.id}}"> {{issues.name}}
+      <p class="question">Generelle kommentarer/merknader/tilleggs-opplysninger?</p>
+      <textarea placeholder="Svar" ngModel name="extra" id="extra"></textarea>
+      <br>
+      <button type="submit" name="submit" id="submit">Send inn</button>
     </div>
-
-    <h3>Generelle kommentarer/merknader/tilleggs-opplysninger?</h3>
-    <textarea ngModel name="extra" id="extra"></textarea>
-    <br>
-    <button type="submit" name="submit" id="submit">Send inn</button>
   </div>
 </form>

@@ -1,14 +1,73 @@
 .checkBoxes{
-
   display: flex;
   flex-direction: column;
+}
+
+.innerContainer{
+  width: 60%;
+  margin: auto auto 1px;
 
 }
 
 .outerContainer{
-  margin: auto;
-  width: 60%;
-  border: 3px solid green;
-  padding: 10px;
+  border-bottom: 3px solid #034584;
+  padding: 100px 10px;
+}
 
+.outerContainer:nth-of-type(even),
+.outerContainer:nth-of-type(even) input[type=text],
+.outerContainer:nth-of-type(even) input[type=number]{
+  background-color: #f9f9f9;
+}
+
+h2{
+  color: #034584;
+  text-decoration: underline #034584;
+  margin-bottom: 20px;
+}
+
+h1{
+  color: #034584;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
+
+.question{
+  font-weight: bold;
+  margin-top: 20px;
+  color: #034584;
+  font-size: 20px;
+}
+
+input[type=text], input[type=number] {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px 5px 1px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #0372b8;
+}
+
+textarea{
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #0372b8;
+  border-radius: 4px;
+  resize: none;
+  transition:0.5s;
+}
+
+*{
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+button{
+  background: #0372b8;
+  color: white;
+  font-size: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
