@@ -24,6 +24,8 @@ h2{
   color: #034584;
   text-decoration: underline #034584;
   margin-bottom: 20px;
+  font-size: 30px;
+
 }
 
 h1{
@@ -31,6 +33,7 @@ h1{
   margin: auto;
   width: 80%;
   padding: 10px;
+  font-size: 40px;
 }
 
 .question{
@@ -60,10 +63,6 @@ textarea{
   transition:0.5s;
 }
 
-*{
-  font-family: 'Libre Franklin', sans-serif;
-}
-
 button{
   background: #0372b8;
   color: white;
@@ -71,4 +70,17 @@ button{
   border-radius: 10px;
   margin-top: 20px;
   padding: 20px 40px;
+}
+
+p{
+  font-size: 20px;
+}
+
+input[type=checkbox]{
+  font-size: 50px;
+}
+
+*{
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 17px;
 }
