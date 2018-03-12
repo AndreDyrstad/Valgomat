@@ -12,18 +12,18 @@ export class HttpService{
   }
   getLocalIssue2() {
    // return this._http.get('http://localhost:4200/assets/issues2.json');
-    return this._http.get('http://valgomat.herokuapp.com/assets/issues2.json');
+    return this._http.get('https://valgomat.herokuapp.com/assets/issues2.json');
   }
   getLocalProfession() {
    // return this._http.get('http://localhost:4200/assets/profession.json');
-    return this._http.get('http://valgomat.herokuapp.com/assets/profession.json');
+    return this._http.get('https://valgomat.herokuapp.com/assets/profession.json');
   }
   getLocalType() {
    // return this._http.get('http://localhost:4200/assets/stayType.json');
-    return this._http.get('http://valgomat.herokuapp.com/assets/stayType.json');
+    return this._http.get('https://valgomat.herokuapp.com/assets/stayType.json');
   }
   getLocalIssue() {
    // return this._http.get('http://localhost:4200/assets/issue.json');
-    return this._http.get('http://valgomat.herokuapp.com/assets/issue.json');
+    return this._http.get('https://valgomat.herokuapp.com/assets/issue.json');
   }
 }
