@@ -60,7 +60,6 @@ textarea{
   border: 2px solid #0372b8;
   border-radius: 4px;
   resize: none;
-  transition:0.5s;
 }
 
 button{
