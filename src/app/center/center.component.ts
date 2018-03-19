@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {HttpService} from '../http-service';
-import {NgForm} from '@angular/forms';
+import {NgForm, NgModel} from '@angular/forms';
 
 @Component({
   selector: 'app-center',
@@ -23,6 +23,8 @@ export class CenterComponent {
   constructor (private _httpService: HttpService) {}
   getData: string;
   postData: string;
+  dognAlder: boolean;
+  dagAlder: boolean;
 
   registerUser(form: NgForm) {
     this._httpService.sendIssues2(form.value)
