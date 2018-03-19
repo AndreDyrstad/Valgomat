@@ -41,13 +41,13 @@
         <p class="question">{{issue.name}}</p>
 
         <div *ngIf="issue.id != 'dognAlder' && issue.id != 'dagAlder'">
-          <input type="radio" required ngModel="{{issue.id}}" [value]="true" name="{{issue.id}}"> Ja
-          <input type="radio" required ngModel="{{issue.id}}" [value]="false" name="{{issue.id}}"> Nei
+          <input type="radio" ngModel="{{issue.id}}" [value]="true" name="{{issue.id}}"> Ja
+          <input type="radio" ngModel="{{issue.id}}" [value]="false" name="{{issue.id}}"> Nei
         </div>
         <div *ngIf="issue.id === 'dognAlder'">
 
-          <input type="radio" required [(ngModel)]="dognAlder" value="true" [value]="true" name="{{issue.id}}"> Ja
-          <input type="radio" required [(ngModel)]="dognAlder" value="false" [value]="false" name="{{issue.id}}"> Nei
+          <input type="radio" [(ngModel)]="dognAlder" value="true" [value]="true" name="{{issue.id}}"> Ja
+          <input type="radio" [(ngModel)]="dognAlder" value="false" [value]="false" name="{{issue.id}}"> Nei
 
           <div *ngIf="dognAlder">
             <input type="number" required placeholder="Alder" ngModel name="aldersbegrensningDogn">
@@ -58,8 +58,8 @@
 
         <div *ngIf="issue.id === 'dagAlder'">
 
-          <input type="radio" required [(ngModel)]="dagAlder"  [value]="true" name="{{issue.id}}"> Ja
-          <input type="radio" required [(ngModel)]="dagAlder"  [value]="false" name="{{issue.id}}"> Nei
+          <input type="radio" [(ngModel)]="dagAlder"  [value]="true" name="{{issue.id}}"> Ja
+          <input type="radio" [(ngModel)]="dagAlder"  [value]="false" name="{{issue.id}}"> Nei
 
           <div *ngIf="dagAlder">
             <input type="number" required placeholder="Alder" ngModel name="aldersbegrensningDag">
@@ -80,8 +80,8 @@
       <h2>Tilbud til personer med MS</h2>
 
       <p class="question">Inntak gruppevis for personer med MS?</p>
-      <input type="radio" required ngModel="group" value="true" name="group"> Ja
-      <input type="radio" required ngModel="group" value="false" name="group"> Nei
+      <input type="radio" ngModel="group" value="true" name="group"> Ja
+      <input type="radio" ngModel="group" value="false" name="group"> Nei
 
       <p class="question">Type opphold</p>
       <div *ngFor="let type of listOfType">
