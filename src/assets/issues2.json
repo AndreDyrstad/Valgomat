@@ -1,51 +1,83 @@
 [
-    {
-      "id": "arm",
-      "name": "Arm-/håndfunksjon"
-    },
-    {
-    "id": "Spastisitet",
-    "name": "spastisitet"
-    },
-    {
+  {
+    "id": "arm",
+    "name": "Arm-/håndfunksjon"
+  },
+  {
+    "id": "gange",
+    "name": "Gange- og Balansefunksjon"
+  },
+  {
+    "id": "spastisitet",
+    "name": "Spastisitet"
+  },
+  {
     "id": "pain",
     "name": "Smerte"
-    },
-    {
+  },
+  {
     "id": "fatigue",
     "name": "Fatigue"
-    },
-    {
+  },
+  {
     "id": "blather",
     "name": "Blærefunksjonen"
-    },
-    {
+  },
+  {
     "id": "intestine",
     "name": "Tarmfunksjon"
-    },
-    {
+  },
+  {
     "id": "depression",
     "name": "Depresjon/angst"
-    },
-    {
+  },
+  {
     "id": "kognitiv",
     "name": "Kognitiv funksjon"
-    },
-    {
+  },
+  {
     "id": "sleep",
     "name": "Søvn"
-    },
-    {
+  },
+  {
     "id": "speech",
     "name": "Tale/språk/svelg"
-    },
-    {
+  },
+  {
     "id": "lungs",
     "name": "Lungefunksjon"
-    },
-    {
+  },
+  {
     "id": "sexual",
     "name": "Seksualfunksjon"
-    }
-  ]
+  },
+  {
+    "id": "arbeidsrettetRehab",
+    "name": "Arbeidsrettet rehabilitering"
+  },
+  {
+    "id": "hjelpemidler",
+    "name": "Behov for hjelpemidler"
+  },
+  {
+    "id": "dagligeAktiviteter",
+    "name": "Daglige aktiviteter"
+  },
+  {
+    "id": "fysiskAktivitet",
+    "name": "Utforskning av muligheter for nye former for fysisk aktivitet"
+  },
+  {
+    "id": "kost",
+    "name": "Kost/ernæringsveiledning"
+  },
+  {
+    "id": "stressmestring",
+    "name": "Stressmestring/\"Å leve med MS\""
+  },
+  {
+    "id": "roykeslutt",
+    "name": "Røykeslutt"
+  }
+]
 

@@ -22,7 +22,7 @@
     <div class="innerContainer">
       <h2>Generelt om tilbud og innhold</h2>
 
-      <p class="question">For private institusjoner: Hvilke(n) helseregion(er) er et gjort avtale med?</p>
+      <p class="question">For private institusjoner: Hvilke(n) helseregion(er) er det gjort avtale med?</p>
       <div class="checkBoxes">
         <div><input ngModel type="checkbox" name="agreementNorth"> {{regions[0]}}</div>
         <div><input ngModel type="checkbox" name="agreementMid"> {{regions[1]}}</div>
@@ -65,19 +65,7 @@
           <input placeholder="Svar" ngModel type="checkbox" id="{{type.id}}" name="{{type.id}}"> {{type.name}}
         </div>
 
-        <p class="question">Antall heldøgnsplasser</p>
-        <input placeholder="Svar" ngModel type="number" id="24hour" name="24hour">
-
-        <p class="question">Antall heldøgnsplasser som er tiltenkt MS</p>
-        <input placeholder="Svar" ngModel type="number" id="24hourMS" name="24hourMS">
-
-        <p class="question">Antall dagplasser</p>
-        <input placeholder="Svar" ngModel type="number" id="12hour" name="12hour">
-
-        <p class="question">Antall dagplasser som er tiltenkt MS</p>
-        <input placeholder="Svar" ngModel type="number" id="12hourMS" name="12hourMS">
-
-        <p class="question">Vanlig ventetid for MS-rehabilitering (i uker)</p>
+        <p class="question">Forventet ventetid for MS-rehabilitering (i uker)</p>
         <input placeholder="Svar" ngModel type="number" id="waiting" name="waiting">
 
         <p class="question">Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</p>
@@ -87,40 +75,6 @@
 
     </div>
   </div>
-
-  <div class="outerContainer">
-    <div class="innerContainer">
-      <h2>Problemstillinger dere har rehabiliteringstilbud for:</h2>
-
-        <p>Kryss av i boksene på listen under for de punktene der dere har et tilbud</p>
-
-        <p class="question">Skole/utdanning/arbeidsrettet rehabilitering</p>
-        <input  type="radio" ngModel="education" value="true" name="education" > Ja
-        <input  type="radio" ngModel="education" value="false" name="education" > Nei
-
-        <p class="question">Daglige funksjoner</p>
-        <ul>
-          <li>Vurdering av hjelpemidler</li>
-          <li>Vurdering av daglige aktiviteter</li>
-          <li>Samhandling med primærhelsetjenesten</li>
-        </ul>
-
-        <input  type="radio" ngModel="dailyFunctions" value="true" name="dailyFunctions" > Ja
-        <input  type="radio" ngModel="dailyFunctions" value="false" name="dailyFunctions" > Nei
-
-        <p class="question">Livsstil</p>
-        <ul>
-          <li>Utforskning av muligheter for nye former for fysisk aktivitet</li>
-          <li>Kost/ernæringsveiledning</li>
-          <li>Stressmestring / "Å leve med MS"</li>
-          <li>Røykeslutt</li>
-        </ul>
-
-        <input  type="radio" ngModel="lifeStyle" value="true" name="lifeStyle" > Ja
-        <input  type="radio" ngModel="lifeStyle" value="false" name="lifeStyle" > Nei
-    </div>
-  </div>
-
 
   <div class="outerContainer">
     <div class="innerContainer">

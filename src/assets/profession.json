@@ -1,39 +1,51 @@
 [
-    {
-      "id": "lege",
-      "name": "Lege"
-    },
-    {
-      "id": "sykepleier",
-      "name": "Sykepleier"
-    },
-    {
-      "id": "hjelpepleier",
-      "name": "Hjelpepleier/helsefagarbeider"
-    },
-    {
-      "id": "psykolog",
-      "name": "Klinisk psykolog"
-    },
-    {
-      "id": "nevropsykolog",
-      "name": "Nevropsykolog"
-    },
-    {
-      "id": "sosionom",
-      "name": "Sosionom"
-    },
-    {
-      "id": "ergoteraoeut",
-      "name": "Ergoterapeut"
-    },
-    {
-      "id": "uroterapeut",
-      "name": "Uroterapeut"
-    },
-    {
-      "id": "logoped",
-      "name": "Logoped"
-    }
-  ]
+  {
+    "id": "lege",
+    "name": "Lege"
+  },
+  {
+    "id": "sykepleier",
+    "name": "Sykepleier"
+  },
+  {
+    "id": "hjelpepleier",
+    "name": "Hjelpepleier/helsefagarbeider"
+  },
+  {
+    "id": "psykolog",
+    "name": "Klinisk psykolog"
+  },
+  {
+    "id": "nevropsykolog",
+    "name": "Nevropsykolog"
+  },
+  {
+    "id": "sosionom",
+    "name": "Sosionom"
+  },
+  {
+    "id": "ergoteraoeut",
+    "name": "Ergoterapeut"
+  },
+  {
+    "id": "fysioterapeut",
+    "name": "Fysioterapeut"
+  },
+  {
+    "id": "erneringsfysiolog",
+    "name": "Ernæringsfysiolog"
+  },
+  {
+    "id": "uroterapeut",
+    "name": "Uroterapeut"
+  },
+  {
+    "id": "logoped",
+    "name": "Logoped"
+  },
+  {
+    "id": "idrett",
+    "name": "Idrettspedagog/idrettsfysiolog el. lignende"
+  }
+]
 

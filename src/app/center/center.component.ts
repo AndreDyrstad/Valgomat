@@ -18,7 +18,7 @@ export class CenterComponent {
  d = this.getIssues();
 
   title = 'Tilbud ved problemstillinger knyttet til';
-  regions = ['Helse Nord', 'Helse midt', 'Helse vest', 'Helse Sør-Øst'];
+  regions = ['Helse Nord', 'Helse Midt-Norge', 'Helse Vest', 'Helse Sør-Øst'];
 
   constructor (private _httpService: HttpService) {}
   getData: string;
