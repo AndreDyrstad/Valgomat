@@ -31,6 +31,7 @@ export class CenterComponent {
         // error => alert(error),
         () => console.log('Done!')
       );
+    alert('Takk for svar');
   }
   getIssues() {
     this._httpService.getLocalIssue()

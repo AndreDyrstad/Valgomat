@@ -39,8 +39,8 @@
       <div *ngFor="let issue of listOfIssues">
 
         <p class="question">{{issue.name}}</p>
-        <input type="radio" ngModel="{{issue.id}}" value=true name="{{issue.id}}"> Ja
-        <input type="radio" ngModel="{{issue.id}}" value=false name="{{issue.id}}"> Nei
+        <input type="radio" ngModel="{{issue.id}}" value="true" name="{{issue.id}}"> Ja
+        <input type="radio" ngModel="{{issue.id}}" value="false" name="{{issue.id}}"> Nei
 
       </div>
 
