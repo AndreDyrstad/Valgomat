@@ -84,6 +84,9 @@
       <input type="radio" ngModel="group" value="false" name="group"> Nei
 
       <p class="question">Type opphold</p>
+
+      (OBS! Feltene under gjør jobben sin, men skal prøve å skjule de så fort som mulig)
+
       <div *ngFor="let type of listOfType">
         <input ngModel type="checkbox" id="{{type.id}}" name="{{type.id}}"> {{type.name}}
 
@@ -96,15 +99,13 @@
         </div>
       </div>
 
-      Ventetid og variget for alle over
-
       <p class="question">Faggrupper/profesjoner som er tilknyttet MS-rehabiliteringen</p>
       <div *ngFor="let profession of listOfProfessions">
         <input ngModel type="checkbox" [checked]="true" id="{{profession.id}}" name="{{profession.id}}" value=false>
         {{profession.name}}
       </div>
 
-      Annet
+     <input type="text" ngModel placeholder="Annet" name="annet">
 
     </div>
   </div>
