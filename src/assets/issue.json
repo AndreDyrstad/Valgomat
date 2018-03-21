@@ -12,24 +12,20 @@
     "name": "Tilbud om basseng?"
   },
   {
-    "id": "rullestol",
-    "name": "Tilrettelagt for rullestolbrukere?"
+    "id": "selvhjulpen",
+    "name": "Må pasienten være selvhjulpen i daglige aktiviteter?"
   },
   {
-    "id": "dognSelvhjulpen",
-    "name": "På deres døgnplasser, er pasienten selvhjulpen i daglige aktiviteter?"
+    "id": "bevegelseshemmende",
+    "name": "Tilrettelagt for bevegelseshemmede?"
   },
   {
-    "id": "dognAlder",
-    "name": "Har dere noen aldersgrense på deres døgnplasser?"
+    "id": "ovre",
+    "name": "Har dere noen øvre aldersgrense?"
   },
   {
-    "id": "dagSelvhjulpen",
-    "name": "På deres dagplasser, er pasienten selvhjulpen i daglige aktiviteter?"
-  },
-  {
-    "id": "dagAlder",
-    "name": "Har dere noen aldersgrense på deres dagplasser?"
+    "id": "nedre",
+    "name": "Har dere noen nedre aldersgrense?"
   }
 ]
 

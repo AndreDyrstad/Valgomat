@@ -9,7 +9,7 @@
   },
   {
     "id": "hjelpepleier",
-    "name": "Hjelpepleier/helsefagarbeider"
+    "name": "Helsefagarbeider"
   },
   {
     "id": "psykolog",
@@ -45,7 +45,7 @@
   },
   {
     "id": "idrett",
-    "name": "Idrettspedagog/idrettsfysiolog el. lignende"
+    "name": "Idrettspedagog"
   }
 ]
 

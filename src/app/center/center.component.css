@@ -20,6 +20,13 @@
   background-color: #f9f9f9;
 }
 
+.stayType{
+  width: 100%;
+  border: 2px solid #0372b8;
+  padding: 30px;
+  margin-bottom: 10px;
+}
+
 h2{
   color: #034584;
   text-decoration: underline #034584;

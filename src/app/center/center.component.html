@@ -30,47 +30,47 @@
         <div><input ngModel type="checkbox" name="agreementSouthEast"> {{regions[3]}}</div>
       </div>
 
-      <p class="question">Hvilke(n) annen/andre region(er) får dere pasienter fra?</p>
-      <div><input ngModel type="checkbox" name="patientFromNorth"> {{regions[0]}}</div>
-      <div><input ngModel type="checkbox" name="patientFromMid"> {{regions[1]}}</div>
-      <div><input ngModel type="checkbox" name="patientFromWest"> {{regions[2]}}</div>
-      <div><input ngModel type="checkbox" name="patientFromSouthEast"> {{regions[3]}}</div>
-
       <div *ngFor="let issue of listOfIssues">
 
         <p class="question">{{issue.name}}</p>
 
-        <div *ngIf="issue.id != 'dognAlder' && issue.id != 'dagAlder'">
+        <div *ngIf="issue.id === 'bevegelseshemmende'">
+
           <input type="radio" ngModel="{{issue.id}}" [value]="true" name="{{issue.id}}"> Ja
+          <input type="radio" ngModel="{{issue.id}}" [value]="partly" name="{{issue.id}}"> Delvis
           <input type="radio" ngModel="{{issue.id}}" [value]="false" name="{{issue.id}}"> Nei
+          <input type="text" ngModel required name="kommentar" placeholder="Kommentar">
+
         </div>
-        <div *ngIf="issue.id === 'dognAlder'">
+
+        <div *ngIf="issue.id !== 'bevegelseshemmende'">
+
+          <div *ngIf="issue.id != 'nedre' && issue.id != 'ovre'">
+            <input type="radio" ngModel="{{issue.id}}" [value]="true" name="{{issue.id}}"> Ja
+            <input type="radio" ngModel="{{issue.id}}" [value]="false" name="{{issue.id}}"> Nei
+          </div>
+
+        </div>
+        <div *ngIf="issue.id === 'ovre'">
 
           <input type="radio" [(ngModel)]="dognAlder" value="true" [value]="true" name="{{issue.id}}"> Ja
           <input type="radio" [(ngModel)]="dognAlder" value="false" [value]="false" name="{{issue.id}}"> Nei
 
           <div *ngIf="dognAlder">
-            <input type="number" required placeholder="Alder" ngModel name="aldersbegrensningDogn">
+            <input type="number" required placeholder="Alder" ngModel name="ovreAlder">
           </div>
-
         </div>
 
+        <div *ngIf="issue.id === 'nedre'">
 
-        <div *ngIf="issue.id === 'dagAlder'">
-
-          <input type="radio" [(ngModel)]="dagAlder"  [value]="true" name="{{issue.id}}"> Ja
-          <input type="radio" [(ngModel)]="dagAlder"  [value]="false" name="{{issue.id}}"> Nei
+          <input type="radio" [(ngModel)]="dagAlder" [value]="true" name="{{issue.id}}"> Ja
+          <input type="radio" [(ngModel)]="dagAlder" [value]="false" name="{{issue.id}}"> Nei
 
           <div *ngIf="dagAlder">
-            <input type="number" required placeholder="Alder" ngModel name="aldersbegrensningDag">
+            <input type="number" required placeholder="Alder" ngModel name="nedreAlder">
           </div>
         </div>
       </div>
-
-
-      <p class="question">Vanlig varighet for opphold?</p>
-      <input required placeholder="Svar" ngModel type="number" name="duration">
-
     </div>
   </div>
 
@@ -85,27 +85,33 @@
 
       <p class="question">Type opphold</p>
       <div *ngFor="let type of listOfType">
-        <input placeholder="Svar" ngModel type="checkbox" id="{{type.id}}" name="{{type.id}}"> {{type.name}}
+        <input ngModel type="checkbox" id="{{type.id}}" name="{{type.id}}"> {{type.name}}
+
+        <div class="stayType" *ngIf="type.id">
+          <p class="question">Vanlig varighet for opphold? (i uker)</p>
+          <input required placeholder="Svar" ngModel type="number" name="duration {{type.name}}">
+
+          <p class="question">Forventet ventetid? (i uker)</p>
+          <input required placeholder="Svar" ngModel type="number" id="ventetidDag" name="waiting {{type.name}}">
+        </div>
       </div>
 
-      <p class="question">Forventet ventetid til dag/poliklinikk? (i uker)</p>
-      <input required placeholder="Svar" ngModel type="number" id="ventetidDag" name="waiting">
+      Ventetid og variget for alle over
 
-      <p class="question">Forventet ventetid til innleggelse? (i uker)</p>
-      <input required placeholder="Svar" ngModel type="number" id="ventetidInnleggelse" name="waiting">
-
-      <p class="question">Faggruppene/profesjonene som er tilknyttet MS-rehabiliteringen</p>
+      <p class="question">Faggrupper/profesjoner som er tilknyttet MS-rehabiliteringen</p>
       <div *ngFor="let profession of listOfProfessions">
         <input ngModel type="checkbox" [checked]="true" id="{{profession.id}}" name="{{profession.id}}" value=false>
         {{profession.name}}
       </div>
+
+      Annet
 
     </div>
   </div>
 
   <div class="outerContainer">
     <div class="innerContainer">
-      <h2>Tilbud ved problemstillinger knyttet til:</h2>
+      <h2>Tilbud knyttet til:</h2>
 
       <div *ngFor="let issues of listOfIssues2">
         <input ngModel type="checkbox" id="{{issues.id}}" name="{{issues.id}}"> {{issues.name}}

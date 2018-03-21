@@ -22,6 +22,18 @@
   {
     "id": "barnPaaroerende",
     "name": "Egne tilbud til barn som pårørende"
+  },
+  {
+    "id": "dognOpphold",
+    "name": "Døgnopphold"
+  },
+  {
+    "id": "dagOpphold",
+    "name": "Dagopphold"
+  },
+  {
+    "id": "poliklinikk",
+    "name": "Poliklinikk"
   }
 ]
 

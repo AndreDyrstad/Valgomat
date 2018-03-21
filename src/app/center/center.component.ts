@@ -25,6 +25,17 @@ export class CenterComponent {
   postData: string;
   dognAlder: boolean;
   dagAlder: boolean;
+  bevegelseshemmende: boolean;
+
+  poliklinikk: boolean;
+  dagOpphold: boolean;
+  dognOpphold: boolean;
+  barnPaaroerende: boolean;
+  voksendePaaroerende: boolean;
+  gradvisFunksjonstap: boolean;
+  raskFunksjonstap: boolean;
+  vurdering: boolean;
+  info: boolean;
 
   registerUser(form: NgForm) {
     this._httpService.sendIssues2(form.value)
