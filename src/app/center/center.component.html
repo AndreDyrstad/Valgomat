@@ -3,7 +3,7 @@
 
 <h1>Kartlegging av rehabiliteringstilbud i spesialisthelsetjenesten for personer med multippel sklerose (MS)</h1>
 
-<form #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)" ngNativeValidate>
+<form #signupForm="ngForm" (ngSubmit)="registerUser(signupForm)" novalidate>
 
   <div class="outerContainer">
     <div class="innerContainer">
@@ -39,7 +39,7 @@
           <input type="radio" ngModel="{{issue.id}}" [value]="true" name="{{issue.id}}"> Ja
           <input type="radio" ngModel="{{issue.id}}" [value]="partly" name="{{issue.id}}"> Delvis
           <input type="radio" ngModel="{{issue.id}}" [value]="false" name="{{issue.id}}"> Nei
-          <input type="text" ngModel required name="kommentar" placeholder="Kommentar">
+          <input type="text" ngModel name="kommentar" placeholder="Kommentar">
 
         </div>
 
@@ -80,22 +80,23 @@
       <h2>Tilbud til personer med MS</h2>
 
       <p class="question">Inntak gruppevis for personer med MS?</p>
-      <input type="radio" ngModel="group" value="true" name="group"> Ja
+      <input type="radio" required ngModel="group" value="true" name="group"> Ja
       <input type="radio" ngModel="group" value="false" name="group"> Nei
 
       <p class="question">Type opphold</p>
 
-      (OBS! Feltene under gjør jobben sin, men skal prøve å skjule de så fort som mulig)
-
       <div *ngFor="let type of listOfType">
-        <input ngModel type="checkbox" id="{{type.id}}" name="{{type.id}}"> {{type.name}}
+        <p class="question">{{type.name}}</p>
+        <input type="radio" [(ngModel)]="type.bool" [value]="true" name="{{type.id}}" required> Ja
+        <input type="radio" [(ngModel)]="type.bool" [value]="false" name="{{type.id}}" required> Nei
 
-        <div class="stayType" *ngIf="type.id">
+        <div class="stayType" *ngIf="type.bool && type.bool != type.id">
+
           <p class="question">Vanlig varighet for opphold? (i uker)</p>
-          <input required placeholder="Svar" ngModel type="number" name="duration {{type.name}}">
+          <input required placeholder="Svar" ngModel type="number" name="duration {{type.id}}">
 
           <p class="question">Forventet ventetid? (i uker)</p>
-          <input required placeholder="Svar" ngModel type="number" id="ventetidDag" name="waiting {{type.name}}">
+          <input required placeholder="Svar" ngModel type="number" id="ventetidDag" name="waiting {{type.id}}">
         </div>
       </div>
 

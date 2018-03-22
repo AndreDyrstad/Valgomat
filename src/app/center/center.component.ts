@@ -27,6 +27,7 @@ export class CenterComponent {
   dagAlder: boolean;
   bevegelseshemmende: boolean;
 
+
   registerUser(form: NgForm) {
     this._httpService.sendIssues2(form.value)
       .subscribe(

@@ -1,38 +1,47 @@
 [
   {
     "id": "info",
+    "bool": "info",
     "name": "Informasjon"
   },
   {
     "id": "vurdering",
+    "bool": "vurdering",
     "name": "Vurdering"
   },
   {
     "id": "raskFunksjonstap",
+    "bool": "raskFunksjonstap",
     "name": "Rehabilitering etter raskt funksjonstap"
   },
   {
     "id": "gradvisFunksjonstap",
+    "bool": "gradvisFunksjonstap",
     "name": "Rehabilitering etter gradvis funksjonstap"
   },
   {
     "id": "voksendePaaroerende",
+    "bool": "voksendePaaroerende",
     "name": "Egne tilbud til voksne pårørende"
   },
   {
     "id": "barnPaaroerende",
+    "bool": "barnPaaroerende",
     "name": "Egne tilbud til barn som pårørende"
   },
   {
     "id": "dognOpphold",
+    "bool": "dognOpphold",
     "name": "Døgnopphold"
   },
   {
     "id": "dagOpphold",
+    "bool": "dagOpphold",
     "name": "Dagopphold"
   },
   {
     "id": "poliklinikk",
+    "bool": "poliklinikk",
     "name": "Poliklinikk"
   }
 ]
